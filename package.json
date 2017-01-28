@@ -1,8 +1,9 @@
 {
-  "name": "ng2-tree-navigator",
+  "name": "@joelabs/tree-navigator",
   "version": "1.0.0",
-  "description": "A NG2 component for navigating tree structures.",
-  "main": "index.js",
+  "description": "An Angular 2 component for navigating tree structures.",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
   "scripts": {
     "rebuild": "npm run clean && npm run build",
     "build": "tsc",
@@ -28,6 +29,5 @@
   "devDependencies": {
     "rimraf": "^2.*",
     "typescript": "^2.1.5"
-  },
-  "typings": "./index.d.ts"
+  }
 }

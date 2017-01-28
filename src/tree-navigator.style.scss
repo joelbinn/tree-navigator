@@ -1,0 +1,22 @@
+.tree-navigator {
+  border: solid;
+}
+
+.breadcrumb {
+  color: blue;
+  li {
+    &:hover {
+      background: grey;
+      cursor: pointer;
+    }
+  }
+}
+.children {
+  color: red;
+  li {
+    &:hover {
+      background: grey;
+      cursor: pointer;
+    }
+  }
+}

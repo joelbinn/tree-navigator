@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es2015",
+        "target": "es6",
         "module": "commonjs",
         "moduleResolution": "node",
         "noImplicitAny": true,
@@ -8,9 +8,9 @@
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         "sourceMap": true,
-        "noEmitHelpers": true,
-        "strictNullChecks": false,
-        "declaration": true
+        //"noEmitHelpers": true,
+        "declaration": true,
+        "strictNullChecks": false
     },
     "files": [
         "index.ts"

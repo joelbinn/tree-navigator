@@ -1,15 +1,19 @@
 import {NgModule} from "@angular/core";
-import {HelloComponent} from "./src/hello.component";
+import {CommonModule} from "@angular/common";
+import {TreeNavigatorComponent, TreeNode} from "./src";
 
-export {HelloComponent};
+export {TreeNavigatorComponent, TreeNode};
 
 @NgModule({
-    declarations: [
-      HelloComponent
-    ],
-    exports:[
-      HelloComponent
-    ]
+  imports: [
+    CommonModule
+  ],
+  declarations: [
+    TreeNavigatorComponent
+  ],
+  exports: [
+    TreeNavigatorComponent
+  ]
 })
-export class HelloModule {
+export class TreeNavigatorModule {
 }

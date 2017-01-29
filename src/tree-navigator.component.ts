@@ -4,17 +4,7 @@ import {TreeNode} from "./tree-node";
 @Component({
   selector: 'jb-tree-navigator',
   styleUrls: ['./tree-navigator.style.scss'],
-  template: `
-<div class="tree-navigator">
-  <ul class="breadcrumb">
-      <li *ngFor="let breadcrumbSegment of breadCrumb" (click)="selectNode(breadcrumbSegment)">{{breadcrumbSegment.displayName}}</li>
-  </ul>
-  <ul class="children">
-      <li *ngFor="let child of children" (click)="selectNode(child)">{{child.displayName}}</li>
-  </ul>
-</div>
-`,
-
+  templateUrl: './tree-navigator.template.html',
 })
 export class TreeNavigatorComponent implements OnInit {
   @Input()
@@ -33,10 +23,12 @@ export class TreeNavigatorComponent implements OnInit {
 
   selectNode(node: TreeNode): void {
     this._selection = node;
-    this.setBreadcrumb(node);
     this._selection.children()
       .then(c => {
-        this._children = c;
+        if (c && c.length > 0) {
+          this.setBreadcrumb(node);
+          this._children = c;
+        }
         this.onSelection.emit(this._selection);
       });
   }

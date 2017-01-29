@@ -1,0 +1,12 @@
+<div class="tree-navigator">
+  <ul class="breadcrumb">
+    <li *ngFor="let breadcrumbSegment of breadCrumb" (click)="selectNode(breadcrumbSegment)">
+      <div>{{breadcrumbSegment.displayName}}</div>
+    </li>
+  </ul>
+  <ul class="children">
+    <li *ngFor="let child of children" (click)="selectNode(child)">
+      <div>{{child.displayName}}</div>
+    </li>
+  </ul>
+</div>
